@@ -1,0 +1,49 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'war'
+apply plugin: 'idea'
+
+group 'com.test'
+version '1.0'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
+        resources {
+            srcDir 'src/main/resources'
+        }
+    }
+    test {
+        java {
+            srcDir 'src/main/java'
+        }
+        resources {
+            srcDir 'src/main/resources'
+        }
+    }
+}
+
+dependencies {
+    compile (
+            "junit:junit:3.8.1"
+    )
+
+    testCompile (
+            "junit:junit:3.8.1",
+    )
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+[compileJava, javadoc, compileTestJava]*.options*.encoding = "UTF-8"

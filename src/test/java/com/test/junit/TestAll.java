@@ -1,5 +1,6 @@
 package com.test.junit;
 
+import junit.extensions.RepeatedTest;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;

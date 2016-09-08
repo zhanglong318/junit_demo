@@ -1,6 +1,5 @@
 apply plugin: 'java'
 apply plugin: 'maven'
-apply plugin: 'war'
 apply plugin: 'idea'
 
 group 'com.test'
